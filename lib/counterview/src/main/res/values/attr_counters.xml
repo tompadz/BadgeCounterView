@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CounterBadgeView">
+        <attr name="counterViewTextColor" format="color"/>
+        <attr name="counterViewBackgroundColor" format="color"/>
+        <attr name="counterViewDefaultValue" format="integer"/>
+        <attr name="counterShowIfZero" format="boolean"/>
+        <attr name="counterTextSize" format="dimension"/>
+        <attr name="counterMaxValue" format="integer"/>
+        <attr name="counterPaddingVertical" format="dimension"/>
+        <attr name="counterPaddingHorizontal" format="dimension"/>
+    </declare-styleable>
+</resources>
