@@ -29,8 +29,15 @@
             <com.dapadz.counterview.CounterBadgeView
                 android:id="@+id/c_d"
                 android:layout_width="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:counterMaxValue="10"
+                app:counterPaddingHorizontal="10dp"
+                app:counterPaddingVertical="5dp"
+                app:counterShowIfZero="true"
+                app:counterTextSize="12sp"
+                app:counterViewBackgroundColor="@color/black"
+                app:counterViewDefaultValue="0"
+                app:counterViewTextColor="@color/white">
 
             </com.dapadz.counterview.CounterBadgeView>
         </LinearLayout>
@@ -52,7 +59,6 @@
                 android:id="@+id/c_color"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
                 app:counterViewBackgroundColor="#8A0000">
 
             </com.dapadz.counterview.CounterBadgeView>
@@ -75,7 +81,6 @@
                 android:id="@+id/c_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
                 app:counterTextSize="20sp">
 
             </com.dapadz.counterview.CounterBadgeView>
@@ -98,7 +103,6 @@
                 android:id="@+id/c_max"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
                 app:counterMaxValue="5">
 
             </com.dapadz.counterview.CounterBadgeView>
@@ -122,7 +126,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:counterShowIfZero="false"
-                android:layout_margin="5dp"
                 app:counterViewDefaultValue="5">
 
             </com.dapadz.counterview.CounterBadgeView>
@@ -145,9 +148,9 @@
                 android:id="@+id/c_paddings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:counterMaxValue="1000"
                 app:counterPaddingHorizontal="10dp"
-                android:layout_margin="5dp"
-                app:counterViewDefaultValue="15">
+                app:counterViewDefaultValue="1000">
 
             </com.dapadz.counterview.CounterBadgeView>
         </LinearLayout>

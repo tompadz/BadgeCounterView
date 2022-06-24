@@ -10,10 +10,14 @@ import android.graphics.drawable.BitmapDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater
-import android.view.animation.*
+import android.view.ViewGroup.MarginLayoutParams
+import android.view.animation.Animation
+import android.view.animation.AnimationSet
+import android.view.animation.ScaleAnimation
 import android.widget.TextSwitcher
 import android.widget.TextView
 import androidx.annotation.ColorRes
+
 
 open class CounterBadgeView:TextSwitcher {
 
@@ -62,6 +66,7 @@ open class CounterBadgeView:TextSwitcher {
 
     fun getValue():Int = counterValue
     fun getMaxValue():Int = counterMaxValue
+
     /**
      * Setting vertical and horizontal indents for the counter text
      */
@@ -171,6 +176,7 @@ open class CounterBadgeView:TextSwitcher {
         counterValue =
             typeArray.getInt(R.styleable.CounterBadgeView_counterViewDefaultValue, counterValue)
         if (counterValue > counterMaxValue) counterValue = counterMaxValue
+        isCircle = counterValue.toString().length == 1
 
         paddingVertical =
             typeArray.getDimension(R.styleable.CounterBadgeView_counterPaddingVertical, paddingVertical)
@@ -185,7 +191,8 @@ open class CounterBadgeView:TextSwitcher {
         setOutAnimation(context, R.anim.slide_down)
 
         updateChild()
-        setCurrentText(counterValue.toString())
+        setText(counterValue.toString())
+        updateSize()
 
         typeArray.recycle()
     }
@@ -300,8 +307,8 @@ open class CounterBadgeView:TextSwitcher {
      */
     private fun updateBackground() {
 
-        val w = _width
-        val h = _height
+        val w =  _width
+        val h =  _height
 
         val counterRectRadius = (w * 2).coerceAtMost(h * 2) * 1.5f
 
