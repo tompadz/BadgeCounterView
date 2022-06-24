@@ -21,7 +21,7 @@ Add the dependency
     
     
 	dependencies {
-	    implementation 'com.github.tompadz:BadgeCounterView:1.0.0'
+	    implementation 'com.github.tompadz:BadgeCounterView:1.0.1'
 	}			
     
 # Usage
